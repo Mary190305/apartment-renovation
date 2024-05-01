@@ -1,0 +1,150 @@
+.photo_with_slider{
+    background-color: #F0EEEE;
+    margin-top: 3.5%;
+	margin-left: -5.5%;
+	margin-right: -5.5%;
+
+	& .text_21{
+		font-size: 2.5vw;
+		font-weight: 700;
+		margin-left: 5%;
+		margin-top: 4%;
+	}
+
+	& .text_22{
+		color: #999999;
+		font-size: 1.2vw;
+		font-weight: 400;
+		margin-left: 5%;
+		margin-top: -1%;
+		margin-bottom: 3.5%;
+	}
+
+	& .slider {
+		position: relative;
+		
+		& .slider__container {
+			display: flex;
+			flex-direction: row;
+			margin-left: 5%;
+			margin-right: 5%;
+		
+			& .slider__image {
+				width: 86%;
+				object-fit: cover;
+			}
+	
+			& .slider__nav {
+				cursor: pointer;
+				background-color: #E5E5E5;
+				border: none;
+				width: 100px;
+			}
+			& .slider__nav-left {
+				font-size: 1.5vw;
+			}
+			& .slider__nav-right {
+				font-size: 1.5vw;
+			}
+		}
+	
+		& .slider__controls {
+			text-align: center;
+			position: absolute;
+			left: 47.5%;
+			bottom: 2.5%;
+		
+			& .slider__dots {
+				padding: 1rem 0;
+				text-align: center;
+		
+				& .slider__dot {
+					cursor: pointer;
+					width: 1vw;
+					height: 1vw;
+					margin: 0 2px;
+					background-color: #F2F2F2;
+					display: inline-block;
+				}
+				.slider__dot.activ,
+				.slider__dot:hover {
+					background-color: #F05A26;
+				}
+
+				.slider__dot.activ{
+					width: 4vw;
+					height: 1vw;
+				}
+			}
+		}
+	}
+
+	.slider_block{
+		display: none;
+		margin-top: 1%;
+		margin-bottom: 5%;
+	
+		& .slider_elem1{
+			display: flex;
+			flex-direction: row;
+	
+			& .text_19{
+				font-size: 1.2vw;
+				font-weight: 400;
+				white-space: nowrap;
+				margin-left: 5%;
+			}
+	
+			& .slider_elem2{
+				display: flex;
+				flex-direction: column;
+	
+				& .text_20{
+					font-size: 1.2vw;
+					font-weight: 400;
+					margin-left: 4.5%;
+				}
+	
+				& .slider_elem3{
+					display: flex;
+					flex-direction: row;
+					margin-left: 4.5%;
+	
+					& .slider_elem4{
+						display: flex;
+						flex-direction: column;
+						margin-right: 10%;
+	
+						& p:first-child{
+							font-size: 1.2vw;
+							font-weight: 400;
+						}
+	
+						& p:last-child{
+							font-size: 1.2vw;
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.slider_block.active{
+		display: block;
+	}
+}
+
+.fade {
+	animation: fade 1.5s;
+	-webkit-animation: fade 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 1;
+	}
+}
